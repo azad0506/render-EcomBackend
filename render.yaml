@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: ecommerce-backend
+    runtime: docker
+    plan: free
+    envVars:
+      - key: DB_HOST
+        value: <RAILWAY_MYSQL_HOST>
+      - key: DB_PORT
+        value: 3306
+      - key: DB_NAME
+        value: <RAILWAY_DB_NAME>
+      - key: DB_USERNAME
+        value: <RAILWAY_DB_USER>
+      - key: DB_PASSWORD
+        value: <RAILWAY_DB_PASS>
+      - key: DB_PARAMS
+        value: ?useSSL=true&requireSSL=true&verifyServerCertificate=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      - key: RAZORPAY_KEY
+        value: rzp_test_Pt2NCySnA3yiWD
+      - key: RAZORPAY_SECRET
+        value: vcKkMnb6tauZtKhpDhIKNx9X
+      - key: PORT
+        value: 10000
